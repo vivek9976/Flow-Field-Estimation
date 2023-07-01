@@ -14,5 +14,5 @@ We employ a style extractor to obtain sufficient deep features of each vehicle s
 apply them using adaptive instance normalisation to improve the estimation performance.
 In addition, a proposed loss function which mainly includes a slice-weighted square and combined loss function is used to train the estimation model. Our proposed method outperforms especially on flow field estimation in wake regions and regions near the vehicle surface. Therefore, the proposed method allows designing vehicle shapes while ensuring desirable aerodynamic performance within a much shorter period than extended CFD simulations.
 
-# Output on Test Data Different from the Training data for the best weight of Style GAN model.
+# Output on Test Data Different for the best weight of Style GAN model.
 
