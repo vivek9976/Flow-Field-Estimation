@@ -17,7 +17,7 @@ For the training estimation model, a dataset that includes the 3D shape informat
 # Requirement
 
 ```bash
-  # atleast 16GB GPU memory
+  Atleast 16GB GPU memory
   https://pytorch.org/get-started/locally/
   Download pytroch using the link above according 
   to your requirement.
