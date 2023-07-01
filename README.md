@@ -30,11 +30,11 @@ For the training estimation model, a dataset that includes the 3D shape informat
 ```
 # Training 
 
-To train the particualar model first install all the packages required and then in the ```bash "hyparameter.py" ``` you can change your parameters according your system requirements and also change the path of training data in the "training.py" itself and in the "dataloder.py" match the input format of data with your dataset and in "dataloader.py" I have used "x=x[128:512,64:192,0:64]/255" to extract the important features from the data you can change this according to your need by visualising your own data. You do not need to change anything in the "model.py" and "loss_function.py" but you have to make some changes in the "Lightning_model.py" "training.py" "dataloader.py" according to your requirements and also I have implemented 3 loss functions, so you can use any of them and can visualize your ouput on all of them.
+To train the particualar model first install all the packages required and then in the ```hyparameter.py``` you can change your parameters according your system requirements and also change the path of training data in the ```training.py``` itself and in the ```dataloder.py``` match the input format of data with your dataset and in ```dataloader.py``` I have used "x=x[128:512,64:192,0:64]/255" to extract the important features from the data you can change this according to your need by visualising your own data. You do not need to change anything in the ```model.py``` and ```loss_function.py``` but you have to make some changes in the ```Lightning_model.py training.py dataloader.py``` according to your requirements and also I have implemented 3 loss functions, so you can use any of them and can visualize your ouput on all of them.
 
 # Testing 
 
-To test the model you have to make some changes in the "dataloader.py" take input velocity and pressure vector as a array of list and run the "test.py" and binary mask of each case is present , where one means the region that allows air to pass through, was added into the dataset. so you can also use that in one of the plots to gain more insights.
+To test the model you have to make some changes in the ```dataloader.py``` take input velocity and pressure vector as a array of list and run the ```test.py``` and binary mask of each case is present , where one means the region that allows air to pass through, was added into the dataset. so you can also use that in one of the plots to gain more insights.
 
 # Output on Test Data for the best weights of Style GAN model.
 
