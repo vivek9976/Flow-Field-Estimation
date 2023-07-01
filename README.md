@@ -1,6 +1,7 @@
 # Flow Field Estimation 
 
-Code for the PyTorch implementation of "Flow Field Estimation" for vehical data which mainly includes the flow fields like velocity and pressure. 
+Code for the PyTorch implementation of "Flow Field Estimation" for vehical data which includes the flow fields like velocity and pressure. I have implemented 2 model Encoder-Decoder model and Style GAN model. So, both are giving the output pretty good so its hard to mention which is performing more better because each model have some pros and cons.
+I have also provided pretrained weights for each model you can use them to finetune the model incase you requirement to run the model is not satisfied.
 
 # Abstract
 
@@ -13,7 +14,7 @@ In addition, a proposed loss function which mainly includes a slice-weighted squ
 
 For the training estimation model, a dataset that includes the 3D shape information of vehicles and corresponding flow fields. In the dataset, inputs are the unsigned distance functions(uSDFs) and outputs are the 3D flow fields around the vehicle.
 
-## Requirements
+# Requirement
 
 ```bash
   https://pytorch.org/get-started/locally/
@@ -29,7 +30,11 @@ For the training estimation model, a dataset that includes the 3D shape informat
 ```
 # Training 
 
-To train the particualar model first install all the packages required and then in the "hyparameter.py" you can change your parameters according your system requirements and also change the path of training data in the "training.py" itself and in the "dataloder.py" match the input format of data with your dataset and in "dataloader.py" I have used "x=x[128:512,64:192,0:64]/255" to extract the important features from the data you can change this according to your need by visualising your own data. You do not need to change anything in the "model.py" and "loss_function.py" but you have to make some changes in the "Lightning_model.py" "training.py" "dataloader.py" according to your requirements and also I have implemented 3 loss functions, so you can use any of them and can visualize your ouput on all of them.
+To train the particualar model first install all the packages required and then in the ```bash "hyparameter.py" ``` you can change your parameters according your system requirements and also change the path of training data in the "training.py" itself and in the "dataloder.py" match the input format of data with your dataset and in "dataloader.py" I have used "x=x[128:512,64:192,0:64]/255" to extract the important features from the data you can change this according to your need by visualising your own data. You do not need to change anything in the "model.py" and "loss_function.py" but you have to make some changes in the "Lightning_model.py" "training.py" "dataloader.py" according to your requirements and also I have implemented 3 loss functions, so you can use any of them and can visualize your ouput on all of them.
+
+# Testing 
+
+To test the model you have to make some changes in the "dataloader.py" take input velocity and pressure vector as a array of list and run the "test.py" and binary mask of each case is present , where one means the region that allows air to pass through, was added into the dataset. so you can also use that in one of the plots to gain more insights.
 
 # Output on Test Data for the best weights of Style GAN model.
 
