@@ -23,6 +23,7 @@ For the training estimation model, a dataset that includes the 3D shape informat
   pip install torchmetrics 
   pip install pytorchlightning
   pip install matplotlib
+  pip install tensorboard
   Use python version>=3.8
   and other you can install if I forgot to mention.
 ```
