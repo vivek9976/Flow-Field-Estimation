@@ -8,10 +8,24 @@ Flow fields, including velocity and pressure fields, are typically used as refer
 To this end, we propose a fast estimation model using 3D convolutional neural networks. We employ a style extractor to obtain sufficient deep features of each vehicle shape and apply them using adaptive instance normalisation to improve the estimation performance.
 In addition, a proposed loss function which mainly includes a slice-weighted square and combined loss function is used to train the estimation model. Our proposed method outperforms especially on flow field estimation in wake regions and regions near the vehicle surface. Therefore, the proposed method allows designing vehicle shapes while ensuring desirable aerodynamic performance within a much shorter period than extended CFD simulations.
 
+
 # Dataset
 
 For the training estimation model, a dataset that includes the 3D shape information of vehicles and corresponding flow fields. In the dataset, inputs are the unsigned distance functions(uSDFs) and outputs are the 3D flow fields around the vehicle.
 
+## Requirements
+
+```bash
+  https://pytorch.org/get-started/locally/
+  Download pytroch using the link above according 
+  to your requirement.
+  pip install numpy
+  pip install torchmetrics 
+  pip install pytorchlightning
+  pip install matplotlib
+  Use python version>=3.8
+  and other you can install if I forgot to metion.
+```
 # Training 
 
 To train the particualar model first install all the packages required and then in the "hyparameter.py" you can change your parameters according your system requirements and also change the path of training data in the "training.py" itself and in the "dataloder.py" match the input format of data with your dataset and in "dataloader.py" I have used "x=x[128:512,64:192,0:64]/255" to extract the important features from the data you can change this according to your need by visualising your own data. You do not need to change anything in the "model.py" and "loss_function.py" but you have to make some changes in the "Lightning_model.py" "training.py" "dataloader.py" according to your requirements and also I have implemented 3 loss functions, so you can use any of them and can visualize your ouput on all of them.
