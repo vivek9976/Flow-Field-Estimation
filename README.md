@@ -17,3 +17,5 @@ In addition, a proposed loss function which mainly includes a slice-weighted squ
 # Output on Test Data for the best weights of Style GAN model.
 
 ![ffe1](https://github.com/vivek9976/Flow-Field-Estimation/assets/79739934/b78b8f79-819f-45c6-aadc-6a601f9334e6)
+
+# Output on Test Data for the best weights of Encoder-Decoder model.
